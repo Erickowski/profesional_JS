@@ -1,17 +1,17 @@
-import MediaPlayer from './MediaPlayer.js';
-import AutoPlay from './plugins/AutoPlay.js';
-import AutoPause from './plugins/AutoPause.js';
+import MediaPlayer from './MediaPlayer';
+import AutoPlay from './plugins/AutoPlay';
+import AutoPause from './plugins/AutoPause';
 
 const video = document.querySelector('video');
 const player = new MediaPlayer({ el: video, plugins: [new AutoPlay(), new AutoPause()] });
-const playButton = document.getElementById('playButton');
-const muteButton = document.getElementById('muteButton');
+const playButton: HTMLElement = document.getElementById('playButton');
+const muteButton: HTMLElement = document.getElementById('muteButton');
 
 playButton.onclick = () => {
     (player.playing === true) ? player.pause() : player.play();
 };
 muteButton.onclick = () => {
-    (player.muted === true) ? player.unmute() : player.mute();
+    (player.media.muted === true) ? player.unmute() : player.mute();
 };
 
 if('serviceWorker' in navigator) {
