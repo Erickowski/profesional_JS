@@ -1,0 +1,14 @@
+{
+  "name": "platzi-media-player",
+  "version": "1.0.0",
+  "description": "Proyecto del curso profesional de JavaScript",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "Erickowski",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "parcel-bundler": "^1.12.4"
+  }
+}

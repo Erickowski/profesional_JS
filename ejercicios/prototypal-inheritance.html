@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo inherencial</title>
+</head>
+<body>
+    <a href="/ejercicios/">Go back</a>
+    <p><em>Abre la consola</em></p>
+    <h1>
+        SomeObject.prototype es un obketo donde definimos el prototipo de las instancias de SomeObject. Es decir, las instancias de SOmeObject van a "heredar" de SomeObject.prototype
+    </h1>
+    <h1>
+        SomeObject.[[Prototype]] es el prototipo de SomeObject. Es decir, SomeObject "hereda" de SomeObject.prototype.
+    </h1>
+    <script>
+        function Hero(name) {
+            this.name = name;
+        }
+        Hero.prototype.saludar = function() {
+            console.log(`Hola soy ${this.name}.`);
+        }
+        const spiderman = new Hero('Spiderman');
+        // Propiedades de la instancia
+
+        // Propiedades de la "clase"
+
+        // Propiedades heredadas ej: toString
+
+        // hasOwnProperty (¿de donde sale toString o esto?)
+
+        // Inspeccionemos el prototipo de spiderman
+
+        // Inspeccionemos el prototipo de Hero
+
+        // Inspeccionemos del Object
+
+
+    </script>
+</body>
+</html>
